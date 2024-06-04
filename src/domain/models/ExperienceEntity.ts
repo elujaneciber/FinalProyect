@@ -2,14 +2,14 @@ export class ExperienceEntity {
   readonly company: string;
   readonly date: string;
   readonly description: string;
-  readonly orden: number;
+  readonly order: number;
   readonly position: string;
 
   constructor(data: ExperienceEntity) {
     this.company = data.company;
     this.date = data.date;
     this.description = data.description;
-    this.orden = data.orden;
+    this.order = data.order;
     this.position = data.position;
   }
 

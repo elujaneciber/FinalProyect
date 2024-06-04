@@ -3,8 +3,8 @@ import { Experience } from "./Experience";
 
 export async function Experiences() {
   const firestoreExperience = new FirestoreExperienceRepository();
-  const experiences = await firestoreExperience.getExperiences();
-  const sortExperiences = experiences.sort((a, b) => a.orden - b.orden);
+  const experiences = await firestoreExperience.get();
+  const sortExperiences = experiences.sort((a, b) => a.order - b.order);
 
   return (
     <section className="col-span-12 md:col-span-8 xl:col-span-9">
