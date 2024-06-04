@@ -1,4 +1,4 @@
-export default function Punto() {
+export function Punto() {
   return (
     <svg
       stroke="currentColor"

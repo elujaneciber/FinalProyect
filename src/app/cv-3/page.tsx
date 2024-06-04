@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Punto from "../Punto";
+import { Punto } from "@components/utils/Punto";
 import Image from "next/image";
 
 export default function Page() {
