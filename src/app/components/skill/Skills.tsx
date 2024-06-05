@@ -18,80 +18,16 @@ export async function Skills() {
             <Skill key={index} content={content} />
           ))}
 
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Trabajo en equipo</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Mentalidad Lean</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Pensamiento abstracto</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Adaptabilidad</span>
-          </div>
+        
         </div>
         <div className="flex flex-col gap-2 text-gray-900 text-lg">
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Resolución de problemas</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Rápido aprendizaje</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Actitud competitiva</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Pensamiento pragmático</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Principios agiles</span>
-          </div>
+          
         </div>
         <div className="flex flex-col gap-2 text-gray-900 text-lg">
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Manejo de consolas de audio</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Operación de sistemas de luces</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Implementación de soluciones tecnológicas</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Programación front-end y back-end (en formación)</span>
-          </div>
+          
         </div>
         <div className="flex flex-col gap-2 text-gray-900 text-lg">
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Programación orientada a objetos (POO)</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Python</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>Java</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Punto />
-            <span>React</span>
-          </div>
+          
         </div>
       </div>
     </div>
