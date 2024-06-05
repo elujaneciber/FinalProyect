@@ -1,4 +1,6 @@
-export function Description() {
+import { DescriptionEntity } from "@domain/models/DescriptionEntity";
+
+export async function Description({ content }: { content: DescriptionEntity }) {
   return (
     <section className="col-span-12 md:col-span-8 xl:col-span-9 py-4 md:px-10">
       <div>

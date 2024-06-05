@@ -1,4 +1,4 @@
-import { ExperienceEntity } from "@domain/models/ExperienceEntity";
+import { EducationEntity } from "@domain/models/EducationEntity";
 
 export function Education({ content }: { content: EducationEntity }) {
   return (
