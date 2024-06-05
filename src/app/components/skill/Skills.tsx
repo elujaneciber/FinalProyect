@@ -1,7 +1,6 @@
 import { Punto } from "@components/utils";
-import { FirestoreSkillsRepository } from "@firebase/dao/FirestoreSkillsRepository";
+import { FirestoreSkillsRepository } from "@firebase/dao";
 import { Skill } from "./Skill";
-
 
 export async function Skills() {
   const firestoreSkills = new FirestoreSkillsRepository();
@@ -15,12 +14,10 @@ export async function Skills() {
       </h3>
       <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-16 mb-2">
         <div className="flex flex-col gap-2 text-gray-900 text-lg">
-         
-         {sortSkills.map((content, index) => (
-          <Skill key={index} content={content} />
-         ))}
-         
-         
+          {sortSkills.map((content, index) => (
+            <Skill key={index} content={content} />
+          ))}
+
           <div className="flex items-center gap-3">
             <Punto />
             <span>Trabajo en equipo</span>
