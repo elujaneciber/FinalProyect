@@ -2,7 +2,7 @@ export class DescriptionEntity {
   readonly description: string;
   readonly lastname: string;
   readonly name: string;
-  readonly profession: number;
+  readonly profession: string;
 
   constructor(data: DescriptionEntity) {
     this.description = data.description;

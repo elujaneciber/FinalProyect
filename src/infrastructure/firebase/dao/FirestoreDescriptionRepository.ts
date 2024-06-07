@@ -1,5 +1,5 @@
 import { db } from "@firebase/config";
-import { doc, getDoc } from "firebase/firestore";
+import { collection, doc, getDoc, updateDoc } from "firebase/firestore";
 import { DescriptionEntity } from "@domain/models/DescriptionEntity";
 import { IFirestoreDescription } from "@domain/repositories/IFirestoreDescription";
 
@@ -11,5 +11,10 @@ export class FirestoreDescriptionRepository implements IFirestoreDescription {
     const ref = doc(db, this.collection, this.descriptionId);
     const docSnapshot = await getDoc(ref);
     return docSnapshot.data() as DescriptionEntity;
+  }
+
+  saveById(data: { [x: string]: string }) {
+    const ref = doc(collection(db, this.collection), this.descriptionId);
+    updateDoc(ref, { ...data });
   }
 }

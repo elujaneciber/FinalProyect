@@ -17,17 +17,6 @@ export async function Skills() {
           {sortSkills.map((content, index) => (
             <Skill key={index} content={content} />
           ))}
-
-        
-        </div>
-        <div className="flex flex-col gap-2 text-gray-900 text-lg">
-          
-        </div>
-        <div className="flex flex-col gap-2 text-gray-900 text-lg">
-          
-        </div>
-        <div className="flex flex-col gap-2 text-gray-900 text-lg">
-          
         </div>
       </div>
     </div>

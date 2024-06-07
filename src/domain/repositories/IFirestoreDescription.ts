@@ -1,5 +1,5 @@
 import { DescriptionEntity } from "@domain/models/DescriptionEntity";
 
 export interface IFirestoreDescription {
-  getById(): Promise<DescriptionEntity>;
+  getById(data: { [x: string]: string }): Promise<DescriptionEntity>;
 }

@@ -1,3 +1,4 @@
+import { EditableInput } from "@components/utils/EditableInput";
 import { FirestoreDescriptionRepository } from "@firebase/dao";
 
 export async function Description() {
@@ -16,7 +17,10 @@ export async function Description() {
       <h3 className="relative text-2xl font-semibold pb-4 pt-6 tracking-[4px] before:absolute before:w-10 before:h-[2px] before:bg-gray-900 before:left-0 before:bottom-0 mb-2">
         Sobre mi
       </h3>
-      <p className="text-gray-500 text-xl">{description.description}</p>
+      <EditableInput
+        field="description"
+        defaultValue={description.description}
+      />
     </section>
   );
 }
