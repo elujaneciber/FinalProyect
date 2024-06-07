@@ -3,7 +3,6 @@ import { collection, doc, getDoc, updateDoc } from "firebase/firestore";
 import { DescriptionEntity } from "@domain/models/DescriptionEntity";
 import { IFirestoreDescription } from "@domain/repositories/IFirestoreDescription";
 
-export const revalidate = 20;
 
 export class FirestoreDescriptionRepository implements IFirestoreDescription {
   private readonly collection = "description";

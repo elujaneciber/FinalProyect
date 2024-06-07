@@ -6,6 +6,9 @@ import { Languages } from "@components/language/Languages";
 import { Educations } from "@components/education/Educations";
 import { Skills } from "@components/skill/Skills";
 
+export const revalidate = 60;
+
+
 export default async function Page() {
   return (
     <article className="max-w-[1400px] mx-auto py-6">
