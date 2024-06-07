@@ -6,8 +6,7 @@ import { Languages } from "@components/language/Languages";
 import { Educations } from "@components/education/Educations";
 import { Skills } from "@components/skill/Skills";
 
-export const revalidate = 60;
-
+export const revalidate = 0;
 
 export default async function Page() {
   return (

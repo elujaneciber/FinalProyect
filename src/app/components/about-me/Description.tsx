@@ -1,8 +1,7 @@
 import { EditableInput } from "@components/utils/EditableInput";
 import { FirestoreDescriptionRepository } from "@firebase/dao";
 
-export const revalidate = 60;
-
+export const revalidate = 0;
 
 export async function Description() {
   const firestoreDescription = new FirestoreDescriptionRepository();
