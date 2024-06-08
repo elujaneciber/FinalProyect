@@ -23,7 +23,7 @@ export async function Skills() {
         {chunkedArray.map((chunk, index) => (
           <div
             key={index}
-            className="flex flex-col gap-2 text-gray-900 text-lg"
+            className="flex flex-col gap-2 text-gray-900 text-lg w-full"
           >
             {chunk.map((content, index) => (
               <Skill key={index} content={content} />

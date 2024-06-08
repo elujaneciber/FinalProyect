@@ -1,16 +1,24 @@
 "use client";
 import { useDebouncedCallback } from "use-debounce";
-import { FirestoreDescriptionRepository } from "@firebase/dao";
+import { FirestoreUpdateDataRepository } from "@firebase/dao";
 import { useRef, useState } from "react";
 
 export function EditableInput({
-  field,
+  className,
+  collectionId,
   defaultValue,
+  docId,
+  field,
+  rows,
 }: {
-  field: string;
+  className: string;
+  collectionId: string;
   defaultValue: string;
+  docId: string;
+  field: string;
+  rows: number;
 }) {
-  const firestoreDescription = new FirestoreDescriptionRepository();
+  const firestoreUpdateData = new FirestoreUpdateDataRepository();
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const [isEditMode, setIsEditMode] = useState(false);
 
@@ -20,19 +28,21 @@ export function EditableInput({
   };
 
   const handleChange = useDebouncedCallback((value: string) => {
-    const content = value;
-    firestoreDescription.saveById({ [field]: content });
+    firestoreUpdateData.saveById(collectionId, docId, {
+      [field]: value,
+    });
   }, 500);
 
   return (
     <textarea
+      name={field}
       ref={inputRef}
       readOnly={!isEditMode}
       onClick={turnOnEditMode}
       defaultValue={defaultValue}
       onChange={(e) => handleChange(e.currentTarget.value)}
-      className="text-gray-500 text-xl w-full"
-      rows={8}
+      className={className}
+      rows={rows}
       style={{ resize: "none" }}
     />
   );
